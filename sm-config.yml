@@ -1,0 +1,22 @@
+version: "1.2"
+
+template_directories:
+  - "schema"
+template_packages:
+  - "schemamacros-logging"
+
+variables:
+  debug: False
+
+targets:
+  build/schema.debug.sql:
+    schema_template: "main.sql"
+    transaction: True
+    variables:
+      LOGGING_LEVEL: DEBUG
+
+  build/schema.prod.sql:
+    schema_template: "main.sql"
+    transaction: True
+    variables:
+      LOGGING_LEVEL: WARNING

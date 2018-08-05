@@ -1,0 +1,2 @@
+schemamacros==0.2.2
+schemamacros-logging==0.1.0
